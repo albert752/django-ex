@@ -1,5 +1,5 @@
 from django.conf import settings
-from django.conf.urls import include, url
+from django.urls import path
 from django.contrib import admin
 
 from welcome.views import index, health
@@ -9,9 +9,9 @@ urlpatterns = [
     # url(r'^$', 'project.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^$', index),
-    url(r'^health$', health),
-    url(r'^admin/', include(admin.site.urls)),
+    path('', index),
+    path('health/', health),
+    path('admin/', admin.site.urls),
 ]
 
 if settings.DEBUG:
