@@ -2,23 +2,23 @@
     "kind": "Template",
     "apiVersion": "v1",
     "metadata": {
-      "name": "django-psql-persistent",
+      "name": "django-api-persistent",
       "annotations": {
-        "openshift.io/display-name": "Django + PostgreSQL",
-        "description": "An example Django application with a PostgreSQL database. For more information about using this template, including OpenShift considerations, see https://github.com/sclorg/django-ex/blob/master/README.md.",
-        "tags": "quickstart,python,django",
+        "openshift.io/display-name": "Django API Gateway + PostgreSQL",
+        "description": "A Django API application with a PostgreSQL database.",
+        "tags": "api,python,django",
         "iconClass": "icon-python",
-        "openshift.io/long-description": "This template defines resources needed to develop a Django based application, including a build configuration, application deployment configuration, and database deployment configuration.",
-        "openshift.io/provider-display-name": "Albert Hat, Inc.",
-        "openshift.io/documentation-url": "https://github.com/sclorg/django-ex",
+        "openshift.io/long-description": "This template defines resources needed to deploy a Django based API application, including a build configuration, application deployment configuration, and database deployment configuration.",
+        "openshift.io/provider-display-name": "Nespra SL",
+        "openshift.io/documentation-url": "https://github.com/albert752/django-ex",
         "openshift.io/support-url": "https://access.redhat.com",
         "template.openshift.io/bindable": "false"
       }
     },
     "message": "The following service(s) have been created in your project: ${NAME}, ${DATABASE_SERVICE_NAME}.\n\nFor more information about using this template, including OpenShift considerations, see https://github.com/sclorg/django-ex/blob/master/README.md.",
     "labels": {
-        "template": "django-psql-persistent",
-        "app": "django-psql-persistent"
+        "template": "django-api-persistent",
+        "app": "django-api-persistent"
     },
     "objects": [
       {
@@ -160,7 +160,7 @@
               "imageChangeParams": {
                 "automatic": true,
                 "containerNames": [
-                  "django-psql-persistent"
+                  "django-api-persistent"
                 ],
                 "from": {
                   "kind": "ImageStreamTag",
@@ -186,7 +186,7 @@
             "spec": {
               "containers": [
                 {
-                  "name": "django-psql-persistent",
+                  "name": "django-api-persistent",
                   "image": " ",
                   "ports": [
                     {
@@ -428,7 +428,7 @@
         "displayName": "Name",
         "description": "The name assigned to all of the frontend objects defined in this template.",
         "required": true,
-        "value": "django-psql-persistent"
+        "value": "django-api-persistent"
       },
       {
         "name": "NAMESPACE",
