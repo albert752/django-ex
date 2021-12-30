@@ -3,14 +3,14 @@ from django.urls import path
 from django.contrib import admin
 
 from welcome.views import index, health
+from api.views import GetAllItems, GetItem
+
 
 urlpatterns = [
-    # Examples:
-    # url(r'^$', 'project.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-
     path('', index),
     path('health/', health),
     path('admin/', admin.site.urls),
+    path('items/', GetAllItems.as_view()),
+    path('item/', GetItem.as_view())
 ]
 

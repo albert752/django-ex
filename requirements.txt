@@ -1,5 +1,6 @@
 django==3.2.10
-django-debug-toolbar==3.2.4
 gunicorn==19.5.0
 psycopg2-binary==2.8.5
 whitenoise==5.3.0
+django-rest-framework==0.1.0
+djangorestframework==3.13.1
